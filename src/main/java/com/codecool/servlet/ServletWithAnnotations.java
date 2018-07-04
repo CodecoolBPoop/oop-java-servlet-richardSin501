@@ -12,13 +12,13 @@ public class ServletWithAnnotations extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+        throws IOException {
 
         PrintWriter out = response.getWriter();
         String title = "GET method with parameters to display";
 
         out.println(
-                "<html>\n" +
+            "<html>\n" +
                 "<head><title>" + title + "</title></head>\n" +
                 "<body>\n" +
                 "<h1 align = \"center\">" + title + "</h1>\n" +
@@ -26,7 +26,8 @@ public class ServletWithAnnotations extends HttpServlet {
                 "<li><b>First Name</b>: " + request.getParameter("first_name") + "\n" +
                 "<li><b>Last Name</b>: " + request.getParameter("last_name") + "\n" +
                 "</ul>\n" +
-                "<div>Visit another servlet: <a href=\"/another\">Visit the other servlet</a></div>" +
+                "<div>Visit another servlet: <a href=\"/another\">Visit the other servlet</a></div>"
+                +
                 "</body></html>"
         );
     }
